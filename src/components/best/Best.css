@@ -1,0 +1,35 @@
+.prev-button, .next-button {
+  width: 44px;
+  height: 44px;
+  box-sizing: border-box;
+  cursor: pointer;
+  z-index: 1;
+  position: absolute;
+  top: calc(50% - 44px);
+  transform: translateY(-50%);
+  outline: none;
+}
+
+.prev-button {
+  left: 0;
+  background: url('../../../public/images/icon/b-prev.svg') center no-repeat;
+  background-size: 44px;
+}
+
+.next-button {
+  right: 0;
+  background: url('../../../public/images/icon/b-next.svg') center no-repeat;
+  background-size: 44px;
+}
+
+.prev-button:hover, .next-button:hover {
+  transition: 0.3s ease-in-out;
+}
+
+.prev-button:hover {
+  background: url('../../../public/images/icon/w-prev.svg') center no-repeat;
+}
+
+.next-button:hover {
+  background: url('../../../public/images/icon/w-next.svg') center no-repeat;
+}

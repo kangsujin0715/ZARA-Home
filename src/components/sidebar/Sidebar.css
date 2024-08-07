@@ -1,0 +1,39 @@
+.custom-prev-button, .custom-next-button {
+  width: 44px;
+  height: 44px;
+  box-sizing: border-box;
+  cursor: pointer;
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  outline: none;
+}
+
+.custom-prev-button {
+  left: 20px;
+  border: 1px solid rgba(0,0,0,0.8);
+  background: rgba(0,0,0,0.3) url('../../../public/images/icon/b-prev.svg') center no-repeat;
+  background-size: 44px;
+}
+
+.custom-next-button {
+  right: 20px;
+  border: 1px solid rgba(0,0,0,0.8);
+  background: rgba(0,0,0,0.3) url('../../../public/images/icon/b-next.svg') center no-repeat;
+  background-size: 44px;
+}
+
+.custom-prev-button:hover, .custom-next-button:hover {
+  transition: 0.3s ease-in-out;
+}
+
+.custom-prev-button:hover {
+  border: 1px solid rgba(255,255,255,0.7);
+  background: rgba(0,0,0,0.4) url('../../../public/images/icon/w-prev.svg') center no-repeat;
+}
+
+.custom-next-button:hover {
+  border: 1px solid rgba(255,255,255,0.7);
+  background: rgba(0,0,0,0.4) url('../../../public/images/icon/w-next.svg') center no-repeat;
+}
