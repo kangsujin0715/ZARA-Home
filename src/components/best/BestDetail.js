@@ -9,15 +9,16 @@ const BestDetail = () => {
   const item = BestList.find(item => item.id === +id);
 
   return (
-    <div className='mt-3.5'>
-      {/* item이 존재할 때만 title을 출력하고, 이미지도 표시하도록 합니다. */}
-      <h1 style={{ marginTop: '300px', background: '#000', color: '#FFF' }}>
-        BestDetail {id} {item.title}
-      </h1>
-        <img src={item.src} alt={item.title} />
-        {item.new}
-        {item.best}
-        {item.price}
+    <div className='mt-[76px]'>
+      <div className='w-[1180px] pt-[45px] mx-auto flex'>
+          <img src={item.src} alt={item.title} style={{width: '540px'}} />
+          <div>
+            <h2>BestDetail {id} {item.title}</h2>
+            {item.new}
+            {item.best}
+            {item.price} 
+          </div>
+      </div>
     </div>
   );
 };

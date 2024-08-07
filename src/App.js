@@ -28,7 +28,7 @@ function App() {
         <Route path="/" element={<Home />} />
        
         <Route path="/best"  element={ <Best /> }/>
-        <Route path="/best/:id"  element={ <BestDetail /> }/>
+        <Route path="/best/:id"  element={ <BestDetail style={{backgroundColor: '#F8F5EE'}} /> }/>
 
 
 
