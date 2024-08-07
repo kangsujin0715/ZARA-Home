@@ -56,8 +56,8 @@ const Navbar = ({ onOffSearchbar }) => {
                   <div className='flex w-[700px] mx-auto pt-5 pb-2'>
                     <h3 className='w-[200px] font-bold text-white text-sm'>{item.name}</h3>
                       <ul className=''>
-                        {item.subCategories.map(subItem => (
-                          <li key={subItem} className='text-white text-sm hover:text-opacity-50 pb-3 transform transition-all duration-300'>
+                        {item.subCategories.map((subItem, index) => (
+                          <li key={index} className='text-white text-sm hover:text-opacity-50 pb-3 transform transition-all duration-300'>
                             <a href={subItem}>{subItem}</a>
                         </li>
                         ))}

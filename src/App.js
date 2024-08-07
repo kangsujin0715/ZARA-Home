@@ -1,15 +1,17 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import Home from "./routes/home/Home";
-import Navbar from './components/navbar/Navbar'
-import Searchbar from './components/searchbar/Searchbar'
-import BestDetail from './components/best/BestDetail'
-import Songs from "./routes/songs/Songs";
-import SongDetail from "./routes/songs/SongDetail";
-import Breads from "./routes/breads/Breads";
-import ChicorBoard from "./routes/chicor_board/ChicorBoard";
-import Skincare from "./routes/skincare/Skincare";
-import Makeup from "./routes/makeup/Makeup";
-import SidebarLayout from "./components/sidebar_layout/SidebarLayout";
+import Navbar from './components/navbar/Navbar';
+import Searchbar from './components/searchbar/Searchbar';
+import Best from './components/best/Best';
+import BestDetail from './components/best/BestDetail';
+// import Songs from "./routes/songs/Songs";
+// import SongDetail from "./routes/songs/SongDetail";
+// import Breads from "./routes/breads/Breads";
+// import ChicorBoard from "./routes/chicor_board/ChicorBoard";
+// import Skincare from "./routes/skincare/Skincare";
+// import Makeup from "./routes/makeup/Makeup";
+// import SidebarLayout from "./components/sidebar_layout/SidebarLayout";
+// import BestItem from "./components/best/BestItem";
 
 function App() {
   const location = useLocation();
@@ -24,13 +26,16 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/breads" element={<Breads />} />
-        <Route path="/songs"  element={ <Songs /> }/>
-        <Route path="/beast/:id"  element={ <BestDetail /> }/>
+       
+        <Route path="/best"  element={ <Best /> }/>
+        <Route path="/best/:id"  element={ <BestDetail /> }/>
 
 
 
 
+
+ {/* <Route path="/breads" element={<Breads />} /> */}
+{/* 
            <Route path="/breads"  element={ <Breads /> }/>
           <Route path="/chicor_board"  element={ <ChicorBoard /> }/>
           <Route path="/skincare"  element={
@@ -42,7 +47,7 @@ function App() {
               <SidebarLayout>
                 <Makeup />
               </SidebarLayout>
-           }  />
+           }  /> */}
       </Routes>
 
       <footer className={`mt-[130px]`}>

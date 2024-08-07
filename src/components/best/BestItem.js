@@ -20,7 +20,7 @@ const BestItem = ({ best, setOpen, setSelectedBest }) => {
         <button onClick={handleClick} className='plus-btn' />
         <button onClick={() => setHeart(!heart)} className={heart ? 'heart-full-btn' : 'heart-btn'} />
       </div>
-      <Link to={`/best/${best.href}`}>
+      <Link to={`/best/${best.id}`}>
         <div className='relative'>
           <div className={`overflow-hidden`}>
             <motion.div
