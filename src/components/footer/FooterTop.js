@@ -1,5 +1,5 @@
 import React from 'react'
-import { footerTopInfoItems } from './FooterData'
+import { footerTopInfoItems } from './FooterList.Data'
 
 const FooterTop = () => {
   return (

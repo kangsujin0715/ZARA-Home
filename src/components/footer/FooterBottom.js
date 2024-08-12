@@ -1,5 +1,5 @@
 import React from 'react'
-import { footerCompanyInfo, footerAppItems, footerBottomInfoItems } from './FooterData'
+import { footerCompanyInfo, footerAppItems, footerBottomInfoItems } from './FooterList.Data'
 import FooterDataGroup from './FooterDataGroup'
 
 const FooterBottom = () => {

@@ -1,0 +1,46 @@
+.interior-box {
+    width: 1180px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 3fr);
+    gap: 20px;
+}
+
+.interior-box .item {
+    position: relative;
+}
+
+.interior-box .item a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 280px;
+}
+
+.interior-box .item .bg-box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.interior-box .item:hover .bg-box {
+    background-color: #955F42;
+    border-radius: 50%;
+    transition: all 0.3s linear;
+}
+
+.interior-box .item:hover a {
+    border-radius: 50%;
+    transition: all 0.3s linear;
+}
+
+.interior-box .item a .title {
+    z-index: 2;
+    font-size: 20px;
+    color: #fff;
+}
