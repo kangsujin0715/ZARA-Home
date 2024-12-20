@@ -7,7 +7,7 @@ import Interior from "../../components/interior/Interior";
 const Home = () => {
 
   return (
-    <div>
+    <div className={`pb-[270px]`}>
       <Sidebar />
       <New />
       <Best />

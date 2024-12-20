@@ -2,7 +2,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import Home from "./routes/home/Home";
 import Navbar from './components/navbar/Navbar';
 import Searchbar from './components/searchbar/Searchbar';
-import Best from './components/best/Best';
+import BestModal from './components/best/Best';
 import BestDetail from './components/best/BestDetail';
 import Footer from "./components/footer/Footer";
 
@@ -19,7 +19,7 @@ function App() {
       
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/best"  element={<Best />}/>
+        <Route path="/best"  element={<BestModal />}/>
         <Route path="/best/:id"  element={<BestDetail style={{backgroundColor: '#F8F5EE'}} />}/>
       </Routes>
 

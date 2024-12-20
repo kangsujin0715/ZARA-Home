@@ -71,6 +71,12 @@ module.exports = {
           'height': '48px',
           'background': 'url(../public/images/icon/b-close.svg) no-repeat center',
         },
+        '.share-btn' : {
+          'width': '48px',
+          'height': '48px',
+          'background': 'url(../public/images/icon/b-share.svg) no-repeat center',
+           'transition' : 'ease-in-out 0.2s',
+        },
         '.md-btn' : {
           'padding': '0 36px',
           'height': '48px',

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import InfoBox from './InfoBox';
 
 const BestItem = ({ best, setOpen, setSelectedBest }) => {
   const [heart, setHeart] = useState(false);
@@ -32,14 +33,7 @@ const BestItem = ({ best, setOpen, setSelectedBest }) => {
             <img src={best.src} />
           </div>
         </div>
-        <div className='flex flex-col items-center mt-3 px-4'>
-          <p>
-            {best.new && <span className={`text-[#CF0A2C] mx-[4px] text-xs font-bold`}>{best.new}</span>}
-            {best.best && <span className={`text-[#0A2ACF] mx-[2px] text-xs font-bold`}>{best.best}</span>}
-          </p>
-          <h3 className={`text-base mb-2 text-[#282828]`}>{best.title}</h3>
-          <h4 className={`text-base text-[#757575]`}>{best.price}원</h4>
-        </div>
+        <InfoBox item={best} share={false} coupon={false}/>
       </Link>
     </div>
   )
