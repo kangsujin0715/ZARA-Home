@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import InfoBox from './InfoBox';
+import PriceBox from './PriceBox';
 
 const BestItem = ({ best, setOpen, setSelectedBest }) => {
   const [heart, setHeart] = useState(false);
@@ -33,7 +33,7 @@ const BestItem = ({ best, setOpen, setSelectedBest }) => {
             <img src={best.src} />
           </div>
         </div>
-        <InfoBox item={best} share={false} coupon={false}/>
+        <PriceBox item={best} share={false} coupon={false}/>
       </Link>
     </div>
   )
