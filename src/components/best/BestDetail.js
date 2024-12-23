@@ -1,9 +1,12 @@
 import React from 'react';
+import styled from "styled-components";
 import { useParams } from 'react-router-dom';
 import BestList from './bestList.Data';
-import InfoBox from './InfoBox';
+import PriceBox from './PriceBox';
 import BoonBox from './BoonBox';
+import SelectBox from './SelectBox';
 import './Best.css';
+
 
 const BestDetail = () => {
   const { id } = useParams(); // useParams를 사용하여 URL의 id를 가져옵니다.
@@ -16,45 +19,48 @@ const BestDetail = () => {
       <div className='w-[1180px] pt-[45px] mx-auto flex'>
           <img src={item.src} alt={item.title} style={{width: '540px', flexShrink: 0}} />
           <div className='all-info-wrap'>
-            <InfoBox item={item} />
-            {/* info-box 가격관련 */}
+            <PriceBox item={item} className="price-info" />
+            {/* price-box 가격관련 */}
             <BoonBox/>
             {/* boon-box 혜택관련 */}
-
-            <div>
-              <div className=''>
-
-              </div>
-              <ul className=''>
-                  <li>
-                    <p></p>
-                    <div className='calc-box'>
-                      <button className='minus'></button>
-                      <span>9999</span>
-                      <button className='plus'></button>
-                    </div>
-                    <p>74,540원</p>
-                    <button className='delete-btn'></button>
-                  </li>  
-              </ul>
-            </div>
-            {/* select-box 제품선택관련 */}
-
+            <SelectBox item={item}/>
+            {/* best select-box 관련 */}
+         
             <div className='total-box'>
-
+              
             </div>
             {/* total-box 총합계 */}
 
-
-            <div className=''>
-                <button></button>
-                <button></button>
-                <button className=''>BUY</button>
-            </div>
+            <BtnBox>
+                <button className="favorite-btn"></button>
+                <button className="share-btn"></button>
+                <BuyNow>BUY NOW</BuyNow>
+            </BtnBox>
+            <p>{item.num}</p>
           </div>
       </div>
     </div>
   );
 };
+
+const BtnBox = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 34px;
+
+  & button {
+    width: 48px;
+    height: 48px;
+  }
+`;
+
+const BuyNow = styled.button`
+  background: #111 !important;
+  color: #FFF;
+  flex-grow: 1;
+  height: 48px;
+`;
+
 
 export default BestDetail;

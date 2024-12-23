@@ -57,6 +57,12 @@ module.exports = {
           'background': 'url(../public/images/icon/r-heart-full.svg) no-repeat center',
           'z-index': '3',
         },
+        'favorite-btn' : {
+          'width': '48px',
+          'height': '48px',
+          'background': '#FFF url(../public/images/icon/b-heart.svg) no-repeat center',
+          'background-size' : '16px',
+        },
         '.plus-btn' : {
           'position': 'absolute',
           'top': 0,
