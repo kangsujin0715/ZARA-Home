@@ -3,14 +3,17 @@ module.exports = {
   content: ["./src/**/*.{html,js,jsx,ts}"],
   theme: {
     extend: {
-      palette : {
-        primary : { main : 'FF6B6B'}
+      colors: {
+        primary : { main : '#FF6B6B'}
       }
     },
   },
   plugins: [
     function({ addUtilities }) {
       const newUtilities = {
+        '*' : {
+          'caret-color': 'transparent',
+          },
         '.main-title': {
           'margin': '130px 0',
           'text-align': 'center',
@@ -30,58 +33,9 @@ module.exports = {
             'outline': 'none',
           },
         },
-        '.main-search-btn': {
-          'width': '24px',
-          'height': '24px',
-          'background': 'url(../public/images/icon/search.svg) no-repeat center',
-        },
         '.main-img': {
           'width': '100%',
           'height': '700px',
-        },
-        '.heart-btn' : {
-          'position': 'absolute',
-          'top': 0,
-          'right': 0,
-          'width': '48px',
-          'height': '48px',
-          'background': 'url(../public/images/icon/r-heart.svg) no-repeat center',
-          'z-index': '3',
-        },
-        '.heart-full-btn' : {
-          'position': 'absolute',
-          'top': 0,
-          'right': 0,
-          'width': '48px',
-          'height': '48px',
-          'background': 'url(../public/images/icon/r-heart-full.svg) no-repeat center',
-          'z-index': '3',
-        },
-        'favorite-btn' : {
-          'width': '48px',
-          'height': '48px',
-          'background': '#FFF url(../public/images/icon/b-heart.svg) no-repeat center',
-          'background-size' : '16px',
-        },
-        '.plus-btn' : {
-          'position': 'absolute',
-          'top': 0,
-          'left': 0,
-          'width': '48px',
-          'height': '48px',
-          'background': 'url(../public/images/icon/w-plus.svg) no-repeat center',
-          'z-index': '3',
-        },
-        '.close-btn' : {
-          'width': '48px',
-          'height': '48px',
-          'background': 'url(../public/images/icon/b-close.svg) no-repeat center',
-        },
-        '.share-btn' : {
-          'width': '48px',
-          'height': '48px',
-          'background': 'url(../public/images/icon/b-share.svg) no-repeat center',
-           'transition' : 'ease-in-out 0.2s',
         },
         '.md-btn' : {
           'padding': '0 36px',

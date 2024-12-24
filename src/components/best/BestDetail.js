@@ -5,6 +5,7 @@ import BestList from './bestList.Data';
 import PriceBox from './PriceBox';
 import BoonBox from './BoonBox';
 import SelectBox from './SelectBox';
+import IconButton from '../common/Icon/IconButton';
 import './Best.css';
 
 
@@ -32,9 +33,9 @@ const BestDetail = () => {
             {/* total-box 총합계 */}
 
             <BtnBox>
-                <button className="favorite-btn"></button>
-                <button className="share-btn"></button>
-                <BuyNow>BUY NOW</BuyNow>
+                <IconButton icon="favorite" bgColor="#FFF" />
+                <IconButton icon="basket" bgColor="#FFF" />
+                <BuyButton>BUY NOW</BuyButton>
             </BtnBox>
             <p>{item.num}</p>
           </div>
@@ -55,7 +56,7 @@ const BtnBox = styled.div`
   }
 `;
 
-const BuyNow = styled.button`
+const BuyButton = styled.button`
   background: #111 !important;
   color: #FFF;
   flex-grow: 1;
