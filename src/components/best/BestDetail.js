@@ -5,6 +5,7 @@ import BestList from './bestList.Data';
 import PriceBox from './PriceBox';
 import BoonBox from './BoonBox';
 import SelectBox from './SelectBox';
+import TotalBox from './TotalBox';
 import IconButton from '../common/Icon/IconButton';
 import './Best.css';
 
@@ -25,11 +26,8 @@ const BestDetail = () => {
             <BoonBox/>
             {/* boon-box 혜택관련 */}
             <SelectBox item={item}/>
-            {/* best select-box 관련 */}
-         
-            <div className='total-box'>
-              
-            </div>
+            {/* select-box 관련 */}
+            <TotalBox item={item}/>
             {/* total-box 총합계 */}
 
             <BtnBox>
@@ -37,7 +35,7 @@ const BestDetail = () => {
                 <IconButton icon="basket" bgColor="#FFF" />
                 <BuyButton>BUY NOW</BuyButton>
             </BtnBox>
-            <p>{item.num}</p>
+            <ProductNum>제품번호 {item.num}</ProductNum>
           </div>
       </div>
     </div>
@@ -63,5 +61,10 @@ const BuyButton = styled.button`
   height: 48px;
 `;
 
+const ProductNum = styled.p`
+  font-size: 12px;
+  color: #757575;
+  margin-top: 10px;
+`;
 
 export default BestDetail;

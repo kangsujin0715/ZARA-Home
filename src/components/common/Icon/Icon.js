@@ -34,13 +34,13 @@ const icons = {
   share: {
     name: 'share',
     src: '/images/icon/b-share.svg',
-    alt: '공유하기',
+    alt: '공유',
     size: 48,
   },
   favorite: {
     name: 'favorite',
     src: '/images/icon/b-heart.svg',
-    alt: '찜하기',
+    alt: '찜',
     size: 48,
   },
   basket: {
@@ -52,8 +52,20 @@ const icons = {
   download: {
     name: 'download',
     src: '/images/icon/b-download.svg',
-    alt: '장바구니',
+    alt: '다운로드',
     size: 48,
+  },
+  plus: {
+    name: 'download',
+    src: '/images/icon/b-plus.svg',
+    alt: '추가',
+    size: 16,
+  },
+  minus: {
+    name: 'download',
+    src: '/images/icon/g-minus.svg',
+    alt: '삭제',
+    size: 16,
   },
 };
 
