@@ -55,7 +55,7 @@
 
 /* bestDetail */
 .bestDetail-box {margin-top: 76px; padding-bottom: 270px; background: #F8F5EE;}
-.bestDetail-box .all-info-wrap {padding-left: 50px; width: 100%;}
+.bestDetail-box .all-info-wrap {padding-left: 50px; width: calc(100% - 540px);}
 
 .price-info .info-box {align-items: start; margin: 0; padding: 0;}
 .price-info .info-box:not(.new, .best) .newBest-box {height: auto;}

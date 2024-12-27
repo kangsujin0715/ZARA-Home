@@ -7,26 +7,30 @@ const CouponList = [
     detail: [
       { 
         id: 1,
-        coupons: [ // 쿠폰 배열
-          {
-            title: '전상품 12% 쿠폰', // title 확인
-            text: '최대 50,000원 할인',
-            downLoad: <IconButton icon="download" />
-          },
-          {
-            title: '전상품 12% 쿠폰',
-            text: '최대 50,000원 할인',
-            downLoad: <IconButton icon="download" />
-          },
-        ]
-      },
-      { 
-        id: 2, 
         coupons: [
           {
-            title: '전상품 120% 쿠폰',
+            sale: '14%',
+            title: '전상품 14% 쿠폰',
             text: '최대 50,000원 할인',
-            downLoad: <IconButton icon="download" />
+            downLoad: <IconButton icon="download" size={24} />
+          },
+          {
+            sale: '12%',
+            title: '전상품 12% 쿠폰',
+            text: '최대 50,000원 할인',
+            downLoad: <IconButton icon="download" size={24} />
+          },
+          {
+            sale: '3%',
+            title: '프로모션 더블 3% 쿠폰',
+            text: '최대 15,000원 할인',
+            downLoad: <IconButton icon="download" size={24} />
+          },
+          {
+            sale: '100%',
+            title: '전상품 100% 쿠폰',
+            text: '최대 15,00000원 할인',
+            downLoad: <IconButton icon="download" size={24} />
           },
         ]
       },
@@ -34,9 +38,27 @@ const CouponList = [
         id: 3, 
         coupons: [
           {
-            title: '전상품 12% 쿠폰',
+            sale: '100%',
+            title: '프로모션 전상품 100% 쿠폰',
+            text: '최대 1,000,000원 할인',
+            downLoad: <IconButton icon="download" size={24} />
+          },
+        ]
+      },
+      { 
+        id: 4, 
+        coupons: [
+          {
+            sale: '10%',
+            title: '전상품 10% 쿠폰',
+            text: '최대 10,000원 할인',
+            downLoad: <IconButton icon="download" size={24} />
+          },
+          {
+            sale: '15%',
+            title: '전상품 15% 쿠폰',
             text: '최대 50,000원 할인',
-            downLoad: <IconButton icon="download" />
+            downLoad: <IconButton icon="download" size={24} />
           },
         ]
       },

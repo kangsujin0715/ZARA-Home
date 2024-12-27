@@ -1,6 +1,7 @@
 import React from 'react'
 import CustomSelect from '../common/CustomSelect';
 import styled from "styled-components";
+import IconButton from '../common/Icon/IconButton';
 
 const colorOptions = ['크림', '카키', '브라운', '블랙'];
 const sizeOptions = ['XS', 'S', 'M', 'L', 'XL'];
@@ -14,15 +15,28 @@ const SelectBox = ({item}) => {
         
       <SelectListBox>
           <ListItem>
-            <div>
-              <span>{item.title}</span>/ {colorOptions.placeholder} / L</div>
-            <div className='calc-box'>
-              <button className='minus'></button>
+            <div><span>{item.title} / {colorOptions[1]} / {sizeOptions[1]}</span></div>
+            <NumberBox className='calc-box'>
+              <IconButton icon="minus" />
               <span>9999</span>
-              <button className='plus'></button>
-            </div>
-            <p>{item.sale ? item.newPrice : item.price}원</p>
-            <button className='delete-btn'></button>
+              <IconButton icon="plus" />
+            </NumberBox>
+            <PriceResultBox>
+              <p>{item.sale ? item.newPrice : item.price}원</p>
+              <IconButton icon="close" size={24} />
+            </PriceResultBox>
+          </ListItem>
+          <ListItem>
+            <div><span>{item.title} / {colorOptions[1]} / {sizeOptions[2]}</span></div>
+            <NumberBox className='calc-box'>
+              <IconButton icon="minus" />
+              <span>9999</span>
+              <IconButton icon="plus" />
+            </NumberBox>
+            <PriceResultBox>
+              <p>{item.sale ? item.newPrice : item.price}원</p>
+              <IconButton icon="close" size={24} />
+            </PriceResultBox>
           </ListItem>
       </SelectListBox>
       {/* select-box 제품선택관련 */}
@@ -31,37 +45,43 @@ const SelectBox = ({item}) => {
 }
 
 
-
-const SelectListBox = styled.ul`
+const SelectListBox = styled.div`
   display: flex;
   align-items: center;
-  width: ${(props) => props.width}; /* 동적 너비 */
+  flex-direction: column;
+  margin-top: 10px;
+
+  & > div {
+    margin-top: 10px;
+  }
+
+  & > div:first-child {
+    margin-top: 0;
+  }
+`;
+
+const ListItem = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
   height: 44px;
-  margin-bottom: ${(props) => props.$mb};
   padding: 0 10px 0 16px;
   background: #F1EADC;
   cursor: pointer;
   font-size: 14px;
   color: #757575;
+  color: #282828;
 `;
 
-
-const ListItem = styled.li`
+const NumberBox = styled.div`
   display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: #282828;
+  align-items: center;
+`;
 
-    & span {
-    display: -webkit-box;
-    overflow: hidden;
-    width: 300px;
-    text-overflow: ellipsis;
-    white-space: normal;
-    word-break: break-all;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-    }
+const PriceResultBox = styled.div`
+  display: flex;
+  align-items: center;
 `;
 
 export default SelectBox

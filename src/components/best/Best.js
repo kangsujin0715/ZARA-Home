@@ -61,7 +61,7 @@ const Best = () => {
         <PopupModal setOpen={setOpenModal} open={openModal} best={selectedBest} width={'880px'} height={'600px'}>
             <img src={`${selectedBest.src}`} alt={`${selectedBest.title} 이미지`}/>
             <div className='p-5 pt-11 grow'>
-              <PriceBox item={selectedBest} className="price-info" />
+              <PriceBox item={selectedBest} className="price-info"/>
             </div>
         </PopupModal>
       }
